@@ -1,0 +1,11 @@
+@keyframes main_secondary_caption_appear {
+	0% {
+		transform: rotate(-90deg) translateX(calc(-100% + 28px)) translateY(+96px);
+		opacity: 0;
+	}
+
+	100% {
+		transform: rotate(-90deg) translateX(calc(-100% + 28px)) translateY(0);
+		opacity: 1;
+	}
+}

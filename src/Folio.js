@@ -10,13 +10,16 @@ class Folio {
 
 		let $this = this;
 
-
 		this.dom = document.createElement( "div");
 		this.dom.classList.add( "nata" );
 
 		document.body.appendChild( this.dom )
 
-		this.$store = new StoreCreator( params )
+		let $store = this.$store = new StoreCreator( params )
+
+		window.$locale = function ( localeKey ) {
+			return $store.getters.translation[ localeKey ] || ""
+		}
 
 		this.$store.commit("setRoot", new Vue({
 	      	el:  this.dom,
@@ -33,6 +36,8 @@ class Folio {
 	      	components: { App },
 	      	template: '<App/>'
 	    }));
+
+
 
 		this.$root = this.$store.state.$root;
 	}

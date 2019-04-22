@@ -1,12 +1,22 @@
 <template>
     <div class="nata root">
-    	hello
+    	<MainPage v-if="$store.state.currentPage==`main`"/>
+    	<ProjectsPage v-if="$store.state.currentPage==`projects`"/>
+    	<ContactsPage v-if="$store.state.currentPage==`contacts`"/>
     </div>
 </template>
 
 <script>
 
+import MainPage from "components/pages/Main.vue"
+import ProjectsPage from "components/pages/Projects.vue"
+import ContactsPage from "components/pages/Contacts.vue"
+
 export default {
+	components: { MainPage },
+	mount () {
+		// this.$store.commit( "currentPage", "projects" )
+	}
 
 }
    

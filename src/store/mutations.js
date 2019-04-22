@@ -5,9 +5,12 @@ var mutations = {
 		state.$root = root;
 	},
 	/*l18n*/
-	setLanguage ( state, language){
+	language ( state, language){
 		state.language = language;
 	},	
+	currentPage ( state, pageName ) {
+		state.currentPage = pageName
+	}
 };
 
 export default mutations;
