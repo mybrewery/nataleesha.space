@@ -9,6 +9,7 @@
 
 		background-image: url( "/res/pics/main_background.jpg" );
 		background-size: cover;
+		overflow: hidden;
 
 		.content {
 			display: flex;
@@ -16,6 +17,11 @@
 			justify-content: center;
 			align-items: center;
 			position: relative;
+			transform-origin: center;
+
+			animation-name: main_content_appear;
+		    animation-duration: 1.2s;
+		    animation-timing-function: ease-in-out;
 
 			h2 {
 				font-family: 'Montserrat', sans-serif;
@@ -29,8 +35,10 @@
 			    transform-origin: top left;
 			    left: 48px;
 			    top: 0;
+
 			    animation-name: main_secondary_caption_appear;
-			    animation-duration: 1.6s;
+			    // animation-delay: 0.6s;
+			    animation-duration: 1.8s;
 			    animation-timing-function: ease-in-out;
 			}
 
@@ -42,6 +50,10 @@
 				line-height: normal;
 				margin: 0;
 				color: #101010;
+
+				animation-name: main_main_caption_appear;
+			    animation-duration: 1.2s;
+			    animation-timing-function: ease-in-out;
 
 				span {
 					color: #FF5722;
