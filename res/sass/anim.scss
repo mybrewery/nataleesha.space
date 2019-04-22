@@ -1,3 +1,17 @@
+/*MAIN PAGE*/
+
+@keyframes main_page_appear {
+	0% {
+		opacity: 0;
+		transform: translateX(0);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translate(0);
+	}
+}
+
 @keyframes main_content_appear {
 	0% {
 		opacity: 0;
@@ -33,3 +47,17 @@
 		opacity: 1;
 	}
 }
+
+@keyframes main_main_caption_span_appear {
+	0% {
+		transform: scale(8);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+
+
+/*SECONDARY PAGE*/

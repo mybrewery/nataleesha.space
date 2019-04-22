@@ -13,7 +13,7 @@ import ProjectsPage from "components/pages/Projects.vue"
 import ContactsPage from "components/pages/Contacts.vue"
 
 export default {
-	components: { MainPage },
+	components: { MainPage, ProjectsPage, ContactsPage },
 	mount () {
 		// this.$store.commit( "currentPage", "projects" )
 	}

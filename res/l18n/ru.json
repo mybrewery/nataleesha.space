@@ -1,4 +1,5 @@
 {
 	"main_greet": 						"Привет<span>.</span><br>Я - Наташа",
-	"main_secondary_caption": 			"Веб-дизайнер<br>из Киева"
+	"main_secondary_caption": 			"Веб-дизайнер<br>из Киева",
+	"projects_secondary_caption":		"Мои работы"
 }

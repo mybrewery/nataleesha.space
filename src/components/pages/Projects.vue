@@ -1,6 +1,10 @@
 <template>
 	<div class="page projects">
-		hi
+		<div class="content">
+			<h2
+				v-html="$store.getters.translation[ `projects_secondary_caption` ]"
+			></h2>
+		</div>
 	</div>
 </template>
 
