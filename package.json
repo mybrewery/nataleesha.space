@@ -1,10 +1,10 @@
 {
-  "name": "nata",
-  "version": "1.0.0",
-  "main": "index.js",
-  "author": "sanyabeast <a.gvrnsk@gmail.com>",
-  "license": "MIT",
-  "scripts": {
+    "name": "nata",
+    "version": "1.0.23",
+    "main": "index.js",
+    "author": "sanyabeast <a.gvrnsk@gmail.com>",
+    "license": "MIT",
+    "scripts": {
         "setup": "yarn install && node scripts/install_git_packages.js",
         "start": "cross-env NODE_ENV=development webpack-dev-server",
         "build": "cross-env NODE_ENV=production webpack"
@@ -18,6 +18,7 @@
         "@babel/preset-env": "latest",
         "@babel/register": "latest",
         "babel-loader": "8.0.4",
+        "resolve-url-loader": "latest",
         "babel-plugin-transform-private-properties": "latest",
         "babel-preset-es2015": "latest",
         "bookshelf-jsdoc-theme": "latest",

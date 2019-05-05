@@ -1,0 +1,20 @@
+.button {
+	cursor: pointer;
+	position: relative;
+
+	&[data-mode="caption-only"] {
+		img.icon {
+			display: none;
+		}
+	}
+
+	&[data-mode="none"] {
+		img.icon, p.caption {
+			display: none;
+		}
+	}
+
+	p.button-caption {
+		font-family: 'Montserrat', sans-serif;
+	}
+}

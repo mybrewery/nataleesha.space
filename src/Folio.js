@@ -37,6 +37,7 @@ class Folio {
 	      	template: '<App/>'
 	    }));
 
+		console.log( "%c Coded by @sanyabeast https://github.com/sanyabeast", "color: #f44336; font-weight: bold; font-family: monospace;" )
 
 
 		this.$root = this.$store.state.$root;

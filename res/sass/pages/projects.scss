@@ -1,0 +1,144 @@
+.page {
+	&.projects {
+		background-color: #FF5722;
+
+		.content {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: flex-start;
+			position: relative;
+			transform-origin: center;
+			height: 100%;
+
+		}
+
+		.projects-list {
+	        display: flex;
+		    flex-direction: column;
+		    width: 100%;
+		    padding: 120px 100px;
+		    box-sizing: border-box;
+		    position: relative;
+		    height: 100%;
+		    overflow-y: scroll;
+
+			.project-item {
+				position: relative;
+
+				&:nth-child(n+2) {
+					margin-top: -30px;
+				}
+
+				&:nth-child(1n) {
+					.button {
+						position: absolute;
+						right: 0;
+						top: 50%;
+						transform: translate(50%, -50%);
+					}
+				}
+
+				&:nth-child(2n) {
+					.button {
+						position: absolute;
+					    left: 0;
+					    bottom: 0;
+					    transform: translate(-50%, 0);
+					}
+				}
+
+				&:nth-child(3n) {
+					.button {
+					    position: absolute;
+					    left: 0;
+					    top: 0;
+					    transform: translate(0%, -300%) rotate(90deg);
+					    transform-origin: left bottom;
+					}
+				}
+
+
+				&:nth-child(even) {
+					align-self: flex-end;
+				}
+
+				&:nth-child(odd) {
+					align-self: flex-start;
+				}
+
+				.preview-wrapper {
+					width: 372px;
+					height: 372px;
+					overflow: hidden;
+					position: relative;
+
+					img {
+						width: 250%;
+						height: auto;
+						animation-name: projects-preview-animation;
+						animation-duration: 300s;
+						animation-iteration-count: infinite;
+						animation-timing-function: linear;
+					}
+				}
+
+				.button {
+					padding: 0 48px;
+					background-color:  rgba(255, 255, 255, 0.7);
+					height: 100px;
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					justify-content: center;
+
+					&:before {
+					    content: "";
+					    position: absolute;
+					    width: calc(100% - 32px);
+					    background-color: #101010;
+					    height: 3px;
+					    right: 16px;
+					    top: 51px;
+					    transition: width 0.25s ease-in-out, right 0.25s ease-in-out;
+					}
+
+					&:after {
+						content: "";
+					    position: absolute;
+					    font-size: 33px;
+					    right: 16px;
+					    text-align: right;
+					    transition: right 0.25s ease-in-out;
+					    width: 10px;
+					    height: 10px;
+					    border-bottom: 3px solid black;
+					    border-right: 3px solid black;
+					    transform: translate(0px, 2px) rotate(-45deg);
+					    transform-origin: center;
+
+					}
+
+					&:hover {
+						&:after {
+							right: 16px;
+						}
+
+						&:before {
+							width: 24px;
+							right: 16px;
+						}
+					}
+
+					p.button-caption {
+						font-family: Montserrat;
+						font-style: normal;
+						font-weight: normal;
+						font-size: 36px;
+					}
+				}
+			}
+		}
+	}
+
+}

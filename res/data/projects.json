@@ -1,0 +1,34 @@
+{
+	"list": [
+		{
+			"id": "art_project",
+			"name": "GA Art Project",
+			"preview": "art_page_1.png",
+			"slides": [ "art_page_1.png", "art_page_2.png", "art_page_3-1.png" ]
+		},
+		{
+			"id": "kenwood",
+			"name": "Kenwood",
+			"preview": "main.png",
+			"slides": [ "main.png", "prices.png", "services.png", "vacancy.png", "contacts.png" ]
+		},
+		{
+			"id": "the_curtis",
+			"name": "The Curtis",
+			"preview": "main.png",
+			"slides": [ "main.png", "menu.png", "gallery.png", "contacts.png", "booking.png", "about.png" ]
+		},
+		{
+			"id": "weleda",
+			"name": "Weleda",
+			"preview": "slide_1.png",
+			"slides" : [ "slide_1.png", "slide_2.png", "slide_3.png", "slide_4.png" ]
+		},
+		{
+			"id": "zozulya",
+			"name": "Zozulya",
+			"preview": "main.png",
+			"slides": [ "main.png", "vat.png", "gallery-1.png", "gallery.png", "feedback.png" ]  
+		}
+	]
+}

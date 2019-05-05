@@ -1,5 +1,14 @@
 {
 	"main_greet": 						"Привет<span>.</span><br>Я - Наташа",
+	"contacts_greet":					"Сделаю для Вас<br><span>красоту</span>",
 	"main_secondary_caption": 			"Веб-дизайнер<br>из Киева",
-	"projects_secondary_caption":		"Мои работы"
+	"projects_secondary_caption":		"Мои работы",
+	"contacts_secondary_caption":		"Мои контакты",
+	"page_name_main": 					"На главную",
+	"page_name_projects":				"Проекты",
+	"page_name_contacts":				"Контакты",
+	"contacts_cv_button_caption": 		"CV",
+	"contacts_email_button_caption": 	"E-mail",
+	"contacts_email_copied":			"Скопировано",
+	"projects_item_details_button_caption": "Подробнее"
 }
