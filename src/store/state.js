@@ -4,7 +4,7 @@ import translations from "store/state/translations"
 var state = {
 	$root: null,
 	/*l18n*/
-	language : "ru",
+	language : "ukr",
 	routes: {
 		"main": [ "contacts", "projects" ],
 		"projects": [ "main", "contacts" ],

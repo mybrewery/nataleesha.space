@@ -8,7 +8,7 @@ const jsonfile = require("jsonfile")
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 const ip = require("ip")
-// const CopyPlugin = require('copy-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 const packageJSON = jsonfile.readFileSync("package.json")
 
@@ -109,6 +109,10 @@ if (env == "production") {
             }
         })]
     }
+
+    webpackConfig.plugins.push( new CopyPlugin([
+      { from: 'res', to: 'res' },
+    ]) )
 } else {
     webpackConfig.entry = {
         "main": "main",

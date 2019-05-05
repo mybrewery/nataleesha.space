@@ -1,0 +1,18 @@
+{
+	"lang_name":								"Українська",
+	"main_greet": 								"Привіт<span>.</span><br>Я - Наталка",
+	"contacts_greet":							"Зроблю Вам<br><span>красоту</span>",
+	"main_secondary_caption": 					"Веб-дизайнер<br>з Київа",
+	"projects_secondary_caption":				"Мої роботи",
+	"contacts_secondary_caption":				"Мої контакти",
+	"page_name_main": 							"На головну",
+	"page_name_projects":						"Проекти",
+	"page_name_contacts":						"Контакти",
+	"contacts_cv_button_caption": 				"CV",
+	"contacts_email_button_caption": 			"E-mail",
+	"contacts_email_copied":					"Скопійовано",
+	"projects_item_details_button_caption": 	"Детальніше",
+	"gallery_prev_button_caption":				"Попередній",
+	"gallery_next_button_caption":				"Наступний",
+	"gallery_exit_button":						"Вийти"			
+}

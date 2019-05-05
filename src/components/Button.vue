@@ -33,7 +33,9 @@ export default {
         }
     },
     methods: {
-        onClick () {
+        onClick ( evt ) {
+            evt.stopPropagation()
+            
             this.$emit( "click", {
                 
             } )

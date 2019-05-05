@@ -8,11 +8,22 @@
 		<div class="content">
 			
 			<div class="projects-list">
-				<Item v-for="project in projects.list"
+				<Item v-for="(project, index) in projects.list"
+					:projectId="project.id"
+					:projectIndex="index"
 					:previewImageSrc="`res/pics/projects/${ project.id }/${ project.preview }`"
+					@click="onItemClick"
 				/>
 			</div>
 		</div>
+
+		<Gallery
+			v-if="galleryShown"
+			:slides="getImageURLs()"
+			@exit="onGalleryExitClick"
+			@prev="onGalleryPrevClick"
+			@next="onGalleryNextClick"
+		/>
 	</div>
 </template>
 
@@ -21,18 +32,64 @@
 import projects from "data/projects.json"
 import Page from "components/Page.vue"
 import Item from "components/pages/Project/Item.vue"
-
-console.log(projects)
+import Gallery from "components/Gallery.vue"
+import { forEach } from "lodash"
 
 export default {
 	name: "ProjectsPage",
-	components: { Item },
+	components: { Item, Gallery },
 	data () {
 		return {
-			projects
+			projects,
+			galleryShown: false,
+			currentProjectIndex: 0
 		}
 	},
-	mixins: [ Page ]
+	mixins: [ Page ],
+	methods: {
+		onItemClick ( payload ) {
+			let projectId = payload.projectId
+			let projectIndex = payload.projectIndex
+
+			this.currentProjectIndex = projectIndex
+			this.galleryShown = true
+
+			console.log(projectId)
+		},
+		onGalleryExitClick () {
+			this.galleryShown = false;
+		},
+		onGalleryPrevClick () {
+			let prevProjectIndex = this.currentProjectIndex - 1
+
+			if ( prevProjectIndex < 0 ) {
+				prevProjectIndex = this.projects.list.length - 1
+			}
+
+			this.currentProjectIndex = prevProjectIndex
+		},
+		onGalleryNextClick () {
+			let nextProjectIndex = this.currentProjectIndex + 1
+
+			if ( nextProjectIndex > this.projects.list.length - 1 ) {
+				nextProjectIndex = 0
+			}
+
+			this.currentProjectIndex = nextProjectIndex
+		},
+		getImageURLs (  ) {
+			let projectData = this.projects.list[ this.currentProjectIndex ]
+
+			let urls = projectData.slides.slice()
+
+			forEach( urls, ( fileName, index )=>{
+				urls[ index ] = `res/pics/projects/${ projectData.id }/${fileName}`
+			} )
+
+
+			return urls
+		}
+	}
 }
    
 </script>

@@ -5,6 +5,8 @@ import StoreCreator from "Store/StoreCreator"
 import App from "Components/App.vue"
 import packageObj from "../package.json"
 
+window.clog = console.log.bind(console)
+
 class Folio {
 	constructor ( params ) {
 
