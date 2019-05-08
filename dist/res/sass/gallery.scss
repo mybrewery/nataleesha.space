@@ -12,7 +12,7 @@
     .slides {
     	padding: 0 120px;
     	flex-grow: 1;
-    	// display: flex;
+    	display: flex;
     	flex-direction: column;
     	overflow-y: auto;
     	overflow-x: hidden;
@@ -20,16 +20,10 @@
 
     	img {
     		width: 100%;
+    		max-width: 1024px;
     		flex-shrink: 0;
-    		margin-bottom: 120px;
-
-    		&:first-child {
-    			margin-top: 60px;
-    		}
-
-    		&:last-child {
-    			margin-bottom: 60px;
-    		}
+    		margin-bottom: 36px;
+    		cusor: pointer;
     	}
     }
 
