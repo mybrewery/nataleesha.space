@@ -1,6 +1,8 @@
 .page {
 	&.projects {
-		background-color: #FF5722;
+		background-color: #e11500;
+		background-image: url( "/res/pics/bg_projects.jpg" );
+		background-size: cover;
 
 		.content {
 			display: flex;
@@ -11,6 +13,10 @@
 			transform-origin: center;
 			height: 100%;
 
+		}
+
+		.sub-header-wrapper h2 {
+			color: #fff;
 		}
 
 		.projects-list {

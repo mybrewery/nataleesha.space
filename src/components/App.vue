@@ -15,19 +15,19 @@
             />
         </div>
 
-    	<transition name="page-fade">
+    	<transition :name="pageTransitionName">
             <MainPage 
                 v-show="$store.state.currentPage==`main` || $store.state.device != `desktop`"
             />
         </transition>
 
-    	<transition name="page-fade">
+    	<transition :name="pageTransitionName">
             <ProjectsPage 
                 v-show="$store.state.currentPage==`projects` || $store.state.device != `desktop`"
             />   
         </transition>
 
-    	<transition name="page-fade">
+    	<transition :name="pageTransitionName">
             <ContactsPage 
                 v-show="$store.state.currentPage==`contacts` || $store.state.device != `desktop`"
             />   
@@ -62,6 +62,11 @@ export default {
 	mount () {
 		// this.$store.commit( "currentPage", "projects" )
 	},
+    data () {
+        return {
+            pageTransitionName: "page-fade-left"
+        }
+    },
     computed: {
         prevButtonCaption () {
             let routes = this.$store.getters.routes
@@ -74,9 +79,11 @@ export default {
     },
     methods: {
         onPrevButtonClick () {
+            this.pageTransitionName = "page-fade-right"
             this.$store.dispatch("prevPage")
         },
         onNextButtonClick () {
+            this.pageTransitionName = "page-fade-left"
             this.$store.dispatch("nextPage")
         },
         onLangButtonClick ( langId ) {

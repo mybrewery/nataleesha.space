@@ -157,8 +157,17 @@ h1, h2 {
 
 	&[data-current-page="main"] {
 		.page-nav-buttons {
+
+			.button.prev-page {
+				background-color: #2d2d2d;
+				background-image: url( "/res/pics/bg_contacts.jpg" );
+				background-position: 63% 40%;
+			}
+
 			.button.next-page {
-				background-color: #FF5722;
+				background-color: #e11500;
+				background-image: url( "/res/pics/bg_projects.jpg" );
+				background-position: 63% 40%;
 			}
 		}
 	}
@@ -166,7 +175,7 @@ h1, h2 {
 	&[data-current-page="projects"] {
 		.page-nav-buttons {
 			.button.prev-page {
-				background-image: url( "/res/pics/main_background.jpg" );
+				background-image: url( "/res/pics/bg_main.jpg" );
 				background-position: 63% 40%;
 				background-size: 1000px;
 
@@ -178,17 +187,36 @@ h1, h2 {
 					border-color: #101010;
 				}
 			}
+
+			.button.next-page {
+				background-color: #2d2d2d;
+				background-image: url( "/res/pics/bg_contacts.jpg" );
+				background-position: 63% 40%;
+			}
+		}
+
+		.lang-select-buttons .button {
+
+			 p.button-caption {
+				color: #ffffff;
+			}
+
+			&:after {
+			    background: #ffffff;
+			}
 		}
 	}
 
 	&[data-current-page="contacts"] {
 		.page-nav-buttons {
 			.button.prev-page {
-				background-color: #FF5722;
+				background-color: #e11500;
+				background-image: url( "/res/pics/bg_projects.jpg" );
+				background-position: 63% 40%;
 			}
 
 			.button.next-page {
-				background-image: url( "/res/pics/main_background.jpg" );
+				background-image: url( "/res/pics/bg_main.jpg" );
 			    background-size: 1000px;
 			    background-position: 63% 40%;
 				background-size: 1000px;

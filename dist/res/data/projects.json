@@ -3,32 +3,32 @@
 		{
 			"id": "art_project",
 			"name": "GA Art Project",
-			"preview": "art_page_1.png",
-			"slides": [ "art_page_1.png", "art_page_3.png", "art_page_3-1.png" ]
+			"preview": "art_page_1.jpg",
+			"slides": [ "art_page_1.jpg", "art_page_3.jpg", "art_page_3-1.jpg" ]
 		},
 		{
 			"id": "zozulya",
 			"name": "Zozulya",
-			"preview": "main.png",
-			"slides": [ "main.png", "vat.png", "gallery-1.png", "gallery.png", "feedback.png" ]  
+			"preview": "main.jpg",
+			"slides": [ "main.jpg", "vat.jpg", "gallery-1.jpg", "gallery.jpg", "feedback.jpg" ]  
 		},
 		{
 			"id": "the_curtis",
 			"name": "The Curtis",
-			"preview": "main.png",
-			"slides": [ "main.png", "menu.png", "gallery.png", "contacts.png", "booking.png", "about.png" ]
+			"preview": "main.jpg",
+			"slides": [ "main.jpg", "menu.jpg", "gallery.jpg", "contacts.jpg", "booking.jpg", "about.jpg" ]
 		},
 		{
 			"id": "weleda",
 			"name": "Weleda",
-			"preview": "slide_1.png",
-			"slides" : [ "slide_1.png", "slide_2.png", "slide_3.png", "slide_4.png" ]
+			"preview": "slide_1.jpg",
+			"slides" : [ "slide_1.jpg", "slide_2.jpg", "slide_3.jpg", "slide_4.jpg" ]
 		},
 		{
 			"id": "kenwood",
 			"name": "Kenwood",
-			"preview": "main.png",
-			"slides": [ "main.png", "prices.png", "services.png", "vacancy.png", "contacts.png" ]
+			"preview": "services.png",
+			"slides": [ "main.jpg", "prices.png", "services.png", "vacancy.png", "contacts.png" ]
 		}
 	]
 }
