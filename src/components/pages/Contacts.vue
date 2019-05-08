@@ -46,9 +46,17 @@ export default {
 			window.open( "res/cv.pdf", "_blank" )
 		},
 		onEmailButtonClick () {
-			Helpers.copytoClipboard( contacts.email )
-			console.log(this.$refs[ "email-copy-button" ])
-			this.$refs[ "email-copy-button" ].$el.classList.add( "copied" )
+
+			if ( this.$store.state.device === "desktop" ) {
+				Helpers.copytoClipboard( contacts.email )
+				this.$refs[ "email-copy-button" ].$el.classList.add( "copied" )
+			} else {
+				Helpers.copytoClipboard( contacts.email )
+				this.$refs[ "email-copy-button" ].$el.classList.add( "copied" )
+				window.open( `mailto:${contacts.email}` )
+			}
+
+			
 
 			setTimeout( ()=>{
 				this.$refs[ "email-copy-button" ].$el.classList.remove( "copied" )

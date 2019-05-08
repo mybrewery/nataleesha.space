@@ -5,8 +5,9 @@
 	flex-direction: column;
 	justify-content: center;
 	overflow: hidden;
-	display: none;
-	position: relative;
+	position: absolute;
+	left: 0;
+	top: 0;
 
 	.content {
 		padding: 0 148px;
@@ -32,14 +33,7 @@
 
 	}	
 
-	&.current {
-		display: flex;
-	}
-
 	&.main {
-		// animation-name: main_page_appear;
-	    // animation-duration: 0.3s;
-	    // animation-timing-function: ease-in;
 
 		background-image: url( "/res/pics/main_background.jpg" );
 		background-size: cover;
@@ -53,9 +47,6 @@
 			position: relative;
 			transform-origin: center;
 
-			// animation-name: main_content_appear;
-		    // animation-duration: 0.8s;
-		    // animation-timing-function: ease-in-out;
 
 			h1 {
 				font-family: 'Montserrat', sans-serif;
@@ -66,15 +57,9 @@
 				margin: 0;
 				color: #101010;
 
-				// animation-name: main_main_caption_appear;
-			    // animation-duration: 0.8s;
-			    // animation-timing-function: ease-in-out;
 
 				span {
 					color: #FF5722;
-					// animation-name: main_main_caption_span_appear;
-				    // animation-duration: 1.6s;
-				    // animation-timing-function: ease-in-out;
 				    transform-origin: center;
 				    display: inline-flex;
 				}

@@ -1,80 +1,3 @@
-/*PAGES*/
-
-@keyframes pages_nav_button_caption_anim {
-	0% {
-		transform: translateX(120%);
-	}
-
-	50% {
-		transform: translateX(0);
-	}
-
-	100% {
-		transform: translateX(-120%);
-	}
-}
-
-
-
-/*MAIN PAGE*/
-
-@keyframes main_page_appear {
-	0% {
-		opacity: 0;
-		transform: translateX(0);
-	}
-
-	100% {
-		opacity: 1;
-		transform: translate(0);
-	}
-}
-
-@keyframes main_content_appear {
-	0% {
-		opacity: 0;
-		transform: scale(2) rotate(15deg) translate(50%, 7%);
-	}
-
-	100% {
-		opacity: 1;
-		transform: scale(1) rotate(0deg) translate(0, 0);
-	}
-}
-
-@keyframes main_main_caption_appear {
-	0% {
-		transform: translateX(100%);
-		opacity: 0;
-	}
-
-	100% {
-		transform: translateX(0);
-		opacity: 1;
-	}
-}
-
-@keyframes main_secondary_caption_appear {
-	0% {
-		transform: rotate(-90deg) translateX(calc(-100% + 28px)) translateY(-100%);
-		opacity: 0;
-	}
-
-	100% {
-		transform: rotate(-90deg) translateX(calc(-100% + 28px)) translateY(0);
-		opacity: 1;
-	}
-}
-
-@keyframes main_main_caption_span_appear {
-	0% {
-		transform: scale(8);
-	}
-
-	100% {
-		transform: scale(1);
-	}
-}
 
 @keyframes projects-preview-animation {
 	0% {
@@ -98,5 +21,47 @@
 	}
 }
 
+/*PAGES*/
+.page-fade-enter-active {
+  animation: page-fade-in 0.666s ease-in-out;
+}
 
-/*SECONDARY PAGE*/
+.page-fade-leave-active {
+  animation: page-fade-out 0.666s ease-in-out;
+}
+
+@keyframes page-fade-out {
+  0% {
+  	clip-path: inset(0% 0% 0% 0%);
+  }
+  100% {
+  	clip-path: inset(100% 0% 0% 0%);
+  }
+}
+
+@keyframes page-fade-in {
+  0% {
+  	clip-path: inset(0% 0% 100% 0%);
+  }
+  100% {
+  	clip-path: inset(0% 0% 0% 0%);
+  }
+}
+
+/*GALLERY*/
+.gallery-fade-enter-active {
+  animation: gallery-fade-in 0.33s ease-in-out;
+}
+.gallery-fade-leave-active {
+  animation: gallery-fade-in 0.33s ease-in-out reverse;
+}
+@keyframes gallery-fade-in {
+  0% {
+  	opacity: 0;
+  	clip-path: inset(20% 20% 20% 20%);
+  }
+  100% {
+  	opacity: 1;
+  	clip-path: inset(0 0 0 0)
+  }
+}

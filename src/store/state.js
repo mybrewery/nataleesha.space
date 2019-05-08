@@ -3,6 +3,7 @@ import translations from "store/state/translations"
 
 var state = {
 	$root: null,
+	device: "desktop",
 	/*l18n*/
 	language : "ukr",
 	routes: {

@@ -1,11 +1,14 @@
 import _ from "./Helpers"
 
 import Vue from "vue"
-import StoreCreator from "Store/StoreCreator"
-import App from "Components/App.vue"
+import StoreCreator from "store/StoreCreator"
+import App from "components/App.vue"
 import packageObj from "../package.json"
+import Device from "device.js/dist/device"
 
 window.clog = console.log.bind(console)
+
+const device = new Device()
 
 class Folio {
 	constructor ( params ) {
@@ -23,7 +26,8 @@ class Folio {
 			return $store.getters.translation[ localeKey ] || ""
 		}
 
-		this.$store.commit("setRoot", new Vue({
+		this.$store.commit( "device", device.desktop )
+		this.$store.commit( "root", new Vue({
 	      	el:  this.dom,
 	      	render: createElement => {
 			  	const context = {

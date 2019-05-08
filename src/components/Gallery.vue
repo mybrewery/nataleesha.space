@@ -9,6 +9,7 @@
 	    	<img
 	    		v-for="slide in slides"
 	    		:src="slide"
+	    		@click="onImageClick"
 	    	/>
 
     	</div>
@@ -61,6 +62,9 @@ export default {
 		},
 		onNextButtonClick () {
 			this.$emit( "next" )
+		},
+		onImageClick ( evt ) {
+			window.open( evt.srcElement.src )
 		}
 	}
 }

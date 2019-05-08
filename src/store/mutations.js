@@ -1,8 +1,11 @@
 import _ from "Helpers";
 
 var mutations = {
-	setRoot ( state, root ){
+	root ( state, root ){
 		state.$root = root;
+	},
+	device ( state, isDesktop ) {
+		state.device = isDesktop ? "desktop" : "mobile"
 	},
 	/*l18n*/
 	language ( state, language){

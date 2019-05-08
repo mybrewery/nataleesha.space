@@ -17,13 +17,17 @@
 			</div>
 		</div>
 
-		<Gallery
-			v-if="galleryShown"
-			:slides="getImageURLs()"
-			@exit="onGalleryExitClick"
-			@prev="onGalleryPrevClick"
-			@next="onGalleryNextClick"
-		/>
+		<transition
+			name="gallery-fade"
+		>
+			<Gallery
+				v-if="galleryShown"
+				:slides="getImageURLs()"
+				@exit="onGalleryExitClick"
+				@prev="onGalleryPrevClick"
+				@next="onGalleryNextClick"
+			/>
+		</transition>
 	</div>
 </template>
 
@@ -77,7 +81,13 @@ export default {
 
 			this.currentProjectIndex = nextProjectIndex
 		},
-		getImageURLs (  ) {
+		onGalleryEnter () {
+			clog(1)
+		},
+		onGalleryLeave () {
+			console.log(2)
+		},
+		getImageURLs () {
 			let projectData = this.projects.list[ this.currentProjectIndex ]
 
 			let urls = projectData.slides.slice()

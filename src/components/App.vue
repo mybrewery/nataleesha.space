@@ -1,6 +1,7 @@
 <template>
     <div 
         class="nata root"
+        v-bind:class="{ mobile: $store.state.device != `desktop` }"
         :data-current-page="$store.state.currentPage"
     >
 
@@ -14,15 +15,23 @@
             />
         </div>
 
-    	<MainPage 
-            v-bind:class="{ current: $store.state.currentPage==`main` }"
-        />
-    	<ProjectsPage 
-            v-bind:class="{ current: $store.state.currentPage==`projects` }"
-        />
-    	<ContactsPage 
-            v-bind:class="{ current: $store.state.currentPage==`contacts` }"
-        />
+    	<transition name="page-fade">
+            <MainPage 
+                v-show="$store.state.currentPage==`main` || $store.state.device != `desktop`"
+            />
+        </transition>
+
+    	<transition name="page-fade">
+            <ProjectsPage 
+                v-show="$store.state.currentPage==`projects` || $store.state.device != `desktop`"
+            />   
+        </transition>
+
+    	<transition name="page-fade">
+            <ContactsPage 
+                v-show="$store.state.currentPage==`contacts` || $store.state.device != `desktop`"
+            />   
+        </transition>
 
         <div class="page-nav-buttons">
             <Button
@@ -82,6 +91,7 @@ export default {
 <style lang="sass">
     import "sass/vars.scss"
     import "sass/app.scss"
+    import "sass/app-mobile.scss"
     import "sass/fonts.scss"
     import "sass/presets.scss"
     import "sass/anim.scss"
