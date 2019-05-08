@@ -29,6 +29,7 @@
 		    line-height: normal;
 		    color: #101010;
 		    transform-origin: center;
+		    text-transform: lowercase;
 		}
 
 	}	
@@ -56,6 +57,7 @@
 				line-height: normal;
 				margin: 0;
 				color: #101010;
+				transform: lowercase;
 
 
 				span {
@@ -95,6 +97,7 @@
 				line-height: normal;
 				margin: 0;
 				color: #ffffff;
+				transform: lowercase;
 
 				span {
 				    display: inline-flex;

@@ -78,10 +78,10 @@
 
 /*GALLERY*/
 .gallery-fade-enter-active {
-  animation: gallery-fade-in 0.444s ease-in-out;
+  animation: gallery-fade-in 0.333s ease-in-out;
 }
 .gallery-fade-leave-active {
-  animation: gallery-fade-in 0.444s ease-in-out reverse;
+  animation: gallery-fade-in 0.333s ease-in-out reverse;
 }
 @keyframes gallery-fade-in {
   0% {

@@ -1,5 +1,8 @@
 <template>
-	<div class="page projects">
+	<div 
+		class="page projects"
+		ref="root"
+	>
 		<div class="sub-header-wrapper">
 			<h2
 				v-html="$store.getters.translation[ `projects_secondary_caption` ]"
@@ -7,7 +10,11 @@
 		</div>
 		<div class="content">
 			
-			<div class="projects-list">
+			<div 
+				class="projects-list"
+				@scroll="onScroll"
+				ref="projectsList"
+			>
 				<Item v-for="(project, index) in projects.list"
 					:projectId="project.id"
 					:projectIndex="index"
@@ -51,6 +58,12 @@ export default {
 	},
 	mixins: [ Page ],
 	methods: {
+		onScroll () {
+			let scrolled = this.$refs.projectsList.scrollTop/  this.$refs.projectsList.scrollHeight * 2
+			if ( scrolled > 1 ) scrolled = 1
+
+			this.$refs.root.style.backgroundPositionY = `${scrolled * 20}%`
+		},
 		onItemClick ( payload ) {
 			let projectId = payload.projectId
 			let projectIndex = payload.projectIndex
